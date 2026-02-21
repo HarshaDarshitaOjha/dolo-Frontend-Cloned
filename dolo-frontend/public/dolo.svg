@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+
+  <!-- Capsule -->
+  <rect x="25" y="70" width="150" height="60" rx="30" fill="none" stroke="black" stroke-width="4"></rect>
+
+  <!-- Thin Divider -->
+  <line x1="100" y1="85" x2="100" y2="115" stroke="black" stroke-width="1.2"></line>
+
+  <!-- Text with Space -->
+  <text x="100" y="112" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" letter-spacing="3" fill="black">
+    DO LO
+  </text>
+
+</svg>
