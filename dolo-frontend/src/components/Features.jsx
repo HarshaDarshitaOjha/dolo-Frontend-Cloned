@@ -56,7 +56,6 @@ const Features = () => {
       })
     }
 
-    // 🔥 Theme Detection (same as Navbar)
     const handleThemeChange = () => {
       setIsLightMode(document.documentElement.classList.contains("light"))
     }
@@ -87,35 +86,24 @@ const Features = () => {
     >
       <div
         ref={boxRef}
-        className={`
+        className="
           relative w-full max-w-6xl
-          backdrop-blur-2xl
+           bg-gray-300/10
+          border 
           overflow-hidden
-          ${isLightMode
-            ? "bg-white shadow-[0_20px_80px_rgba(0,0,0,0.08)] border border-gray-200"
-            : "bg-white/[0.05] shadow-[0_20px_80px_rgba(0,0,0,0.6)] border border-white/10"
-          }
-        `}
+        "
         style={{
           transformOrigin: "center center",
           willChange: "transform, border-radius"
         }}
       >
-        {/* Subtle Bluish-Gray Blobs */}
-        <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-slate-400/10 blur-[130px] rounded-full" />
-        <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-blue-300/8 blur-[130px] rounded-full" />
-
         <div className="py-28 px-12 relative z-10">
           
           {/* Title */}
           <h2
             className={`
               text-3xl md:text-4xl text-center mb-24 font-semibold tracking-tight
-              bg-gradient-to-r bg-clip-text text-transparent
-              ${isLightMode
-                ? "from-gray-900 to-gray-600"
-                : "from-white to-white/60"
-              }
+              ${isLightMode ? "text-gray-900" : "text-white"}
             `}
           >
             Features That Make a Difference
@@ -139,18 +127,16 @@ const Features = () => {
               <div
                 key={index}
                 ref={(el) => (cardsRef.current[index] = el)}
-                className={`
-                  relative p-10 rounded-2xl backdrop-blur-xl
-                  ${isLightMode
-                    ? "bg-white border border-gray-200"
-                    : "bg-white/[0.04] border border-white/10"
-                  }
-                `}
+                className="
+                  relative p-10 rounded-2xl
+                  glass
+                  border border-gray-300
+                "
                 style={{ willChange: "transform" }}
               >
                 <h3
                   className={`text-xl mb-4 ${
-                    isLightMode ? "text-gray-900" : "text-white/90"
+                    isLightMode ? "text-gray-900" : "text-white"
                   }`}
                 >
                   {item.title}

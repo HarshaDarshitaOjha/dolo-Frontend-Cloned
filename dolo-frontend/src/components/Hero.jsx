@@ -1,6 +1,5 @@
 import { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import ParticleBackground from "./ParticleBackground"
 import Typewriter from "typewriter-effect"
 
 const Hero = () => {
@@ -42,9 +41,6 @@ const Hero = () => {
 
   return (
     <section ref={heroRef} className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
-      
-      {/* Background */}
-      <ParticleBackground />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl">
