@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --font-playfair: 'Playfair Display', serif;
+}
+
+:root {
+  /* dark (default) */
+  --bg: #000000;
+  --text: #F5F5F7;
+  --muted: #9CA3AF;
+  --card: #1c1c1f;
+}
+
+/* light theme overrides */
+.light {
+  --bg: #FAFBFC;
+  --text: #0b1220;
+  --muted: #6b7280;
+  --card: #ffffff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 180ms ease, color 180ms ease;
+  overflow-x: hidden;
+}
+
+/* Make utilities adapt in light mode where components used dark-tailwind classes */
+.light .text-white { color: var(--text) !important; }
+.light .text-gray-400 { color: var(--muted) !important; }
+.light .glass { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.06); }
+.light .bg-\[\#1c1c1f\] { background-color: var(--card) !important; }
+.light .bg-white\/5 { background-color: rgba(0,0,0,0.04) !important; }
+
+/* Theme-specific overrides for buttons and navbar in light mode */
+.light .theme-border {
+  border-color: rgba(0,0,0,0.9) !important;
+  color: var(--text) !important;
+}
+
+.light .site-nav {
+  border-color: rgba(0,0,0,0.12) !important;
+  background: var(--card) !important;
+}
+
+.light .site-nav .text-gray-300 {
+  color: var(--text) !important;
+}
+
+/* Login button light mode overrides */
+.light .site-nav button[class*="text-white/70"] {
+  color: var(--muted) !important;
+}
+
+.light .site-nav button[class*="text-white/70"]:hover {
+  color: var(--text) !important;
+}
+
+.light .site-nav button[class*="text-white/70"] span {
+  background-color: var(--text) !important;
+}
+
+/* Login button light mode overrides */
+.light .site-nav button[class*="text-white/70"] {
+  color: var(--muted) !important;
+}
+
+.light .site-nav button[class*="text-white/70"]:hover {
+  color: var(--text) !important;
+}
+
+.light .site-nav button[class*="text-white/70"] span {
+  background-color: var(--text) !important;
+}
+/* SVG logo color in light mode: only change strokes and text fill (don't force fill on shapes) */
+.light .site-nav svg [stroke], .light .site-nav svg line, .light .site-nav svg path {
+  stroke: rgba(0,0,0,0.9) !important;
+}
+
+.light .site-nav svg text {
+  fill: var(--text) !important;
+}
+
+/* Headings use Playfair Display for a consistent serif look */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+.Typewriter__cursor {
+  font-weight: 100 !important;   /* thinner */
+  opacity: 0.6;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.liquid-btn {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.liquid-btn:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(255,255,255,0.15);
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: floaty 6s ease-in-out infinite;
+}
