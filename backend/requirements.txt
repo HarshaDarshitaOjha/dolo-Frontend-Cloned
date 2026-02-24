@@ -3,5 +3,7 @@ uvicorn==0.30.6
 sqlalchemy==2.0.35
 psycopg2-binary==2.9.9
 python-dotenv==1.0.1
-google-genai==2.5.0
+# specify a valid google-genai version; 2.5.0 does not exist on PyPI
+# use latest available (e.g. 1.64.0) or leave unpinned
+google-genai>=1.64.0
 python-multipart==0.0.12
